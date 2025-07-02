@@ -3,7 +3,7 @@ import { SignUp } from "@clerk/nextjs";
 export default function page() {
   return (
     <div className="authForms sign-up-form">
-      <SignUp />
+      <SignUp forceRedirectUrl="/" />
     </div>
   );
 }
