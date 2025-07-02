@@ -68,7 +68,7 @@ export default function AnalyticsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-blue-50 p-10">
       <motion.div
-        className="max-w-7xl mx-auto space-y-10"
+        className="mx-auto space-y-10"
         initial="hidden"
         animate="visible"
         variants={{

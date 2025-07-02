@@ -141,13 +141,13 @@ export default function ServicesPage() {
   const notAvailableServices = allServices.filter((s) => !s.available).length;
 
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-blue-50 to-white p-8 max-w-4xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-tr from-blue-50 to-white p-8  mx-auto">
       <Toaster position="top-center" reverseOrder={false} />
-      <h2 className="text-3xl font-bold text-[#00b1bb] mb-6 flex items-center gap-3">
+      <h2 className="text-3xl font-bold text-[#00b1bb] mb-6 flex items-center gap-3 flex-wrap justify-center text-center md:justify-start md:text-left">
         <MdOutlineDesignServices className="text-[#00b1bb]" /> Services
       </h2>
 
-      <h4 className="text-lg font-bold text-[#333] mb-6 flex items-center gap-3">
+      <h4 className="text-lg font-bold text-[#333] mb-6 flex items-center gap-3 flex-wrap justify-center text-center md:justify-start md:text-left">
         <FaRegCheckCircle className="text-green-500" /> Services Offered Across
         the App
       </h4>
@@ -223,7 +223,7 @@ export default function ServicesPage() {
       <h2 className="text-xl font-bold text-[#00b1bb] mb-6 flex items-center gap-3">
         <MdOutlineDesignServices className="text-[#00b1bb]" /> My Services
       </h2>
-      <ul className="space-y-4" data-aos="fade-up">
+      <ul className="space-y-4">
         {services.map((service) => (
           <li
             key={service.id}
