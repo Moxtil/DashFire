@@ -75,17 +75,18 @@ export default function Sidebar() {
             );
           })}
         </nav>
+        <div className="translate-x-1.5 mt-4">
+          <UserButton
+            afterSignOutUrl="/"
+            appearance={{
+              elements: {
+                userButtonPopoverCard: "shadow-lg border border-gray-200",
+                userButtonAvatarBox: "ring-2 ring-yellow-500 w-[50px] h-[50px]",
+              },
+            }}
+          />
+        </div>
       </div>
-
-      <UserButton
-        afterSignOutUrl="/"
-        appearance={{
-          elements: {
-            userButtonPopoverCard: "shadow-lg border border-gray-200",
-            userButtonAvatarBox: "ring-2 ring-yellow-500 w-[50px] h-[50px]",
-          },
-        }}
-      />
     </aside>
   );
 }

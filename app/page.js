@@ -25,9 +25,9 @@ export default function Home() {
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.7 }}
-        className="text-4xl sm:text-6xl font-extrabold text-[#00b1bb] drop-shadow-md mb-4 flex items-center"
+        className="text-4xl sm:text-6xl font-extrabold text-[#00b1bb] drop-shadow-md mb-4 flex items-center flex-wrap justify-center"
       >
-        <Image src={logo} alt="moxtil firedash" width={75} height={50} />{" "}
+        <Image src={logo} alt="moxtil firedash" width={50} height={50} />{" "}
         Welcome to FireDash
       </motion.h1>
 

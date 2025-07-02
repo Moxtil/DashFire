@@ -141,7 +141,7 @@ export default function UsersPage() {
       <Toaster position="top-center" reverseOrder={false} />
 
       <motion.h1
-        className="text-3xl font-bold mb-6 text-[#00b1bb] flex items-center gap-1"
+        className="text-3xl font-bold mb-6 text-[#00b1bb] flex items-center gap-1 flex-wrap justify-center text-center md:justify-start md:text-left"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >

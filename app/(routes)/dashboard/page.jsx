@@ -102,7 +102,7 @@ export default function DashboardHome() {
         }}
       >
         <motion.h1
-          className="text-4xl font-bold text-gray-800 flex items-center gap-1"
+          className="text-4xl font-bold text-gray-800 flex items-start flex-wrap  gap-1"
           variants={{
             hidden: { opacity: 0, y: -30 },
             visible: { opacity: 1, y: 0 },

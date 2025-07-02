@@ -77,7 +77,7 @@ export default function AnalyticsPage() {
         }}
       >
         <motion.h1
-          className="text-4xl font-bold text-[#00b1bb] flex items-center gap-3"
+          className="text-4xl font-bold text-[#00b1bb] flex items-center gap-3 flex-wrap justify-center text-center md:justify-start md:text-left"
           variants={{
             hidden: { opacity: 0, y: -30 },
             visible: { opacity: 1, y: 0 },
