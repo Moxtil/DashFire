@@ -147,7 +147,7 @@ export default function ServicesPage() {
         <MdOutlineDesignServices className="text-[#00b1bb]" /> Services
       </h2>
 
-      <h4 className="text-lg font-bold text-[#333] mb-6 flex items-center gap-3 flex-wrap justify-center text-center md:justify-start md:text-left">
+      <h4 className="text-xs md:text-lg font-bold text-[#333] mb-6 flex items-center gap-3 justify-start text-left md:justify-start md:text-left">
         <FaRegCheckCircle className="text-green-500" /> Services Offered Across
         the App
       </h4>

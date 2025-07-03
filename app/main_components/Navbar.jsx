@@ -7,11 +7,14 @@ import { FiBarChart2, FiUsers } from "react-icons/fi";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { RxDashboard } from "react-icons/rx";
 import { MdDesignServices } from "react-icons/md";
+import { PiChats } from "react-icons/pi";
 
 import logo from "../assets/Group 250.svg";
 import { SideContext } from "../context/SidebarContext";
 import dynamic from "next/dynamic";
+import { AuthContext } from "../context/RoleContext";
 export default function Sidebar() {
+  const { role } = useContext(AuthContext);
   const pathname = usePathname();
   const UserButton = dynamic(
     () => import("@clerk/nextjs").then((mod) => mod.UserButton),
@@ -24,6 +27,11 @@ export default function Sidebar() {
     { href: "/dashboard", label: "Dashboard", icon: <RxDashboard size={24} /> },
     { href: "/analytics", label: "Analytics", icon: <FiBarChart2 size={24} /> },
     { href: "/users", label: "Users", icon: <FiUsers size={24} /> },
+    {
+      href: `/chat/${role === "Admin" ? "admin" : "user"}`,
+      label: "Chat",
+      icon: <PiChats size={24} />,
+    },
     {
       href: "/services",
       label: "Services",

@@ -5,6 +5,7 @@ import SidebarContext from "./context/SidebarContext";
 import RouteContext from "./context/RouteContext";
 import AOSProvider from "./context/AOS";
 import Head from "next/head";
+import { AuthProvider } from "./context/RoleContext";
 
 const outfit = Outfit({
   weight: ["400", "500", "600"],
@@ -25,11 +26,13 @@ export default function RootLayout({ children }) {
       </Head>
       <body className={`${outfit.className} antialiased`}>
         <ClerkProvider>
-          <AOSProvider>
-            <SidebarContext>
-              <RouteContext>{children}</RouteContext>
-            </SidebarContext>
-          </AOSProvider>
+          <AuthProvider>
+            <AOSProvider>
+              <SidebarContext>
+                <RouteContext>{children}</RouteContext>
+              </SidebarContext>
+            </AOSProvider>
+          </AuthProvider>
         </ClerkProvider>
       </body>
     </html>
